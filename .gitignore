@@ -1,4 +1,4 @@
-venv/
-__pycache__/
+fhirdicomvenv/
 .DS_Store
+__pycache__/
 *.pyc
