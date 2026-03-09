@@ -52,6 +52,28 @@ DICOM is inherently multimodal. The **Modality** tag (0008,0060) defines the typ
 ## 🛠️ Industrial Setup: Step-by-Step
 
 We follow an industry-standard workflow:
-1. **Virtual Environments**: Using `venv` to isolate dependencies.
+1. **Virtual Environments**: Using `fhirdicomvenv` to isolate dependencies.
 2. **Git Workflow**: Developing in feature branches (`feature/topic-name`) and using "Pull Requests" for review.
 3. **Python Stack**: Leveraging `pydicom` for imaging and `fhir.resources` for clinical data.
+
+---
+
+## 📘 Tutorial 1: FHIR Patient Basics (Input & Output)
+
+In this first exercise, we demonstrate how to create a structured healthcare record from scratch.
+
+### 📥 The Input (Python)
+We use the `fhir.resources` library, which provides strictly validated models. 
+- **Patient()**: The core class for patient data.
+- **Identifier()**: Used for Medical Record Numbers (MRN). In a real hospital, this is how you link records across different databases.
+- **HumanName()**: Handles complex name structures (official, nickname, maiden names).
+
+### 📤 The Output (Standardized JSON)
+When we call `patient.json()`, we are **Transcoding** our Python logic into a machine-readable format that any FHIR-compliant server (like Epic, Cerner, or HAPI FHIR) can understand.
+
+#### Key JSON Fields:
+- `"resourceType"`: Tells the receiving system that this is a Patient record.
+- `"meta"`: Contains technical metadata (e.g., when the record was last touched).
+- `"identifier"`: A list of IDs. Note that hospitals use **Systems** (URLs) to define the context of an ID.
+
+---
