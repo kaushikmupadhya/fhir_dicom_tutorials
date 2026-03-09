@@ -1,0 +1,24 @@
+{
+  "resourceType": "Patient",
+  "meta": {
+    "lastUpdated": "2026-03-09T15:37:00Z"
+  },
+  "identifier": [
+    {
+      "system": "http://hospital.org/fhir/mrn",
+      "value": "12345"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Doe",
+      "given": [
+        "John",
+        "Quincy"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1990-01-01"
+}
