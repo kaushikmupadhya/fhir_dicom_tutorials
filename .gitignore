@@ -2,3 +2,4 @@ fhirdicomvenv/
 .DS_Store
 __pycache__/
 *.pyc
+*.wiki/
