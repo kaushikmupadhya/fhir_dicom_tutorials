@@ -1,4 +1,4 @@
-# Comprehensive Guide: FHIR & DICOM in Python
+# FHIR & DICOM in Python
 
 This repository serves as a pedagogical resource for healthcare data interoperability, focusing on the two most critical standards in modern health informatics: **FHIR** and **DICOM**.
 
@@ -77,3 +77,9 @@ When we call `patient.json()`, we are **Transcoding** our Python logic into a ma
 - `"identifier"`: A list of IDs. Note that hospitals use **Systems** (URLs) to define the context of an ID.
 
 ---
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any changes.
+
+## Contact
+If you have any questions or suggestions, feel free to contact me at [Kaushik Manjunatha](https://www.linkedin.com/in/kaushik-manjunatha/)
